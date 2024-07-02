@@ -1,9 +1,8 @@
-import NavBar from "./components/NavBar";
-
+import Guests from "./pages/Guests";
 function App() {
-   return (
+  return (
     <>
-      <NavBar />
+      <Guests />
     </>
   );
 }
