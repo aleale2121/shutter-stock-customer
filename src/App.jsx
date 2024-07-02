@@ -1,8 +1,10 @@
-import Guests from "./pages/Guests";
+// import Guests from "./pages/Guests";
+import Contacts from "./pages/Contacts";
 function App() {
   return (
     <>
-      <Guests />
+      {/* <Guests /> */}
+      <Contacts />
     </>
   );
 }
