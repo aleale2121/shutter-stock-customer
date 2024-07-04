@@ -3,25 +3,24 @@ import RadioInput from "./RadioInput";
 import UpperContainer from "./UpperContainer";
 import PropTypes from "prop-types";
 
-export function PricingLabel({ pricing }) {
+export function PricingPlan({ id, name, pricing, active }) {
   return (
     <label
-      htmlFor="radio_1"
+      htmlFor={id}
       className="group bg-slate-700 rounded-xl text-white  
                   has-[:checked]:bg-violet-700 peer cursor-pointer"
     >
-      <RadioInput />
-      <UpperContainer
-        name={pricing?.name}
-        price={pricing.price}
-        quantity={pricing.quantity}
-      />
+      <RadioInput id={id} name={name} active={active} />
+      <UpperContainer pricing={pricing} />
       <div className="border-t border-slate-700" />
-      <LowerContainer />
+      <LowerContainer pricing={pricing} />
     </label>
   );
 }
 
-PricingLabel.propTypes = {
-  pricing: PropTypes.any,
+PricingPlan.propTypes = {
+  id: PropTypes.any.isRequired,
+  name: PropTypes.any.isRequired,
+  pricing: PropTypes.any.isRequired,
+  active: PropTypes.any.isRequired,
 };

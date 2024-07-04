@@ -1,4 +1,4 @@
-export default function Tabs() {
+export default function PricingTabs() {
   return (
     <div className="container w-3/4 mb-4 mx-auto border-b border-gray-20">
       <ul

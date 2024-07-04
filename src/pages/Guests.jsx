@@ -67,9 +67,7 @@ export default function Guests() {
           </div>
         </div>
       </section>
-      <section id="cta" className="py-24 bg-darkViolet">
-        <CTA />
-      </section>
+      <CTA />
       <Footer />
     </>
   );
