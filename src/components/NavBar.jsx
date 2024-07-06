@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import logo from '/assets/images/logo.svg'
 
 export default function NavBar() {
   useEffect(() => {
@@ -20,39 +19,41 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className="relative container mx-auto p-6">
-      {/* Flex Container For All Items */}
+    <nav className="relative container mx-auto px-6  bg-veryDarkViolet">
       <div className="flex items-center justify-between">
-        {/* Flex Container For Logo/Menu */}
         <div className="flex items-center space-x-20">
-          {/* Logo */}
-          <img src={logo} alt="" />
-          {/* Left Menu */}
+          <div className="w-60 max-w-full px-4">
+            <a href="javascript:void(0)" className="block w-full py-5">
+              <img
+                src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
+                alt="logo"
+              />
+            </a>
+          </div>
+
           <div className="hidden space-x-8 font-bold lg:flex">
-            <a
-              href="#"
-              className="text-grayishViolet hover:text-veryDarkViolet"
-            >
+            <a href="#" className="text-grayishViolet hover:text-white">
               Home
             </a>
             <a
               href="pricing.html"
-              className="text-grayishViolet hover:text-veryDarkViolet"
+              className="text-grayishViolet hover:text-white"
             >
               Pricing
             </a>
             <a
               href="contactus.html"
-              className="text-grayishViolet hover:text-veryDarkViolet"
+              className="text-grayishViolet hover:text-white"
             >
               Contact us
             </a>
           </div>
         </div>
 
-        {/* Right Buttons Menu */}
         <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-          <div className="hover:text-veryDarkViolet">Login</div>
+          <a href="#" className="hover:text-white">
+            Login
+          </a>
           <a
             href="#"
             className="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70"
@@ -61,7 +62,6 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/* Hamburger Button */}
         <button
           id="menu-btn"
           className="block hamburger lg:hidden focus:outline-none"
@@ -76,27 +76,32 @@ export default function NavBar() {
       {/* Mobile Menu */}
       <div
         id="menu"
-        className="absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100"
+        className="absolute hidden md:hidden max-w-[400px] min-w-[350px] p-6 rounded-lg bg-dark2 right-6 top-20 z-100"
       >
-        <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
-          <a href="#" className="w-full text-center">
-            Home
-          </a>
-          <a href="pricing.html" className="w-full text-center">
-            Pricing
-          </a>
-          <a href="contactus.html" className="w-full text-center">
-            Contact us
-          </a>
-          <a
-            href="#"
-            className="w-full pt-6 border-t border-gray-400 text-center"
-          >
-            Login
-          </a>
-          <a href="#" className="w-full py-3 text-center rounded-full bg-cyan">
-            Sign Up
-          </a>
+        <div className="flex items-center justify-center w-full font-bold text-white rounded-sm">
+          <div className="flex flex-col items-center justify-center w-full space-y-6 ">
+            <a href="#" className="w-full text-center">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+            <a href="pricing.html" className="w-full text-center">
+              Pricing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+            <a href="contactus.html" className="w-full text-center">
+              Contact us
+            </a>
+            <a
+              href="#"
+              className="w-full pt-6 border-t border-gray-400 text-center hover:text-white"
+            >
+              Login &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+            <a
+              href="#"
+              className="w-full py-3 text-center rounded-full bg-cyan"
+            >
+              Sign Up
+            </a>
+          </div>
         </div>
       </div>
     </nav>

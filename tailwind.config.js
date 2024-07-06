@@ -26,6 +26,8 @@ export default {
         },
         cyanLight: "hsl(180, 66%, 69%)",
         darkViolet: "hsl(257, 27%, 26%)",
+        darkBlue: "rgb(55 88 249)",
+        dark2:"rgb(31 42 55)",
         red: "hsl(0, 87%, 67%)",
         grayishViolet: "hsl(257, 7%, 63%)",
         veryDarkBlue: "hsl(255, 11%, 22%)",
