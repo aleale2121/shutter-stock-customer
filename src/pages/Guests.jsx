@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 import MediaCard from "../components/MediaCard";
 import Hero from "../features/guests/Hero";
 import SearchForm from "../features/guests/SearchForm";
-import CTA from "../components/guests/CTA";
+import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 
 const data = [
