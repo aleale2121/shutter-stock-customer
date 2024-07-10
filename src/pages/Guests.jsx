@@ -42,6 +42,42 @@ const data = [
     name: "Abstract Painting",
     description: "245 likes - 35 Shares",
   },
+  {
+    id: 7,
+    mediaSrc: "assets/images/image3.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
+  {
+    id: 8,
+    mediaSrc: "assets/images/image4.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
+  {
+    id: 9,
+    mediaSrc: "assets/images/image5.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
+  {
+    id: 10,
+    mediaSrc: "assets/images/image6.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
+  {
+    id: 11,
+    mediaSrc: "assets/images/image5.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
+  {
+    id: 12,
+    mediaSrc: "assets/images/image6.jpg", // Update the path here
+    name: "Abstract Painting",
+    description: "245 likes - 35 Shares",
+  },
 ];
 
 export default function Guests() {

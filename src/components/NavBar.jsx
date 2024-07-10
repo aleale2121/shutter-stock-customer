@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   useEffect(() => {
@@ -23,30 +24,30 @@ export default function NavBar() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-20">
           <div className="w-60 max-w-full px-4">
-            <a href="javascript:void(0)" className="block w-full py-5">
+            <NavLink to="#" className="block w-full py-5">
               <img
                 src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
                 alt="logo"
               />
-            </a>
+            </NavLink>
           </div>
 
           <div className="hidden space-x-8 font-bold lg:flex">
-            <a href="#" className="text-grayishViolet hover:text-white">
+            <NavLink to="/home" className="text-grayishViolet hover:text-white">
               Home
-            </a>
-            <a
-              href="pricing.html"
+            </NavLink>
+            <NavLink
+              to="/pricing"
               className="text-grayishViolet hover:text-white"
             >
               Pricing
-            </a>
-            <a
-              href="contactus.html"
+            </NavLink>
+            <NavLink
+              to="/contact"
               className="text-grayishViolet hover:text-white"
             >
               Contact us
-            </a>
+            </NavLink>
           </div>
         </div>
 
@@ -80,15 +81,20 @@ export default function NavBar() {
       >
         <div className="flex items-center justify-center w-full font-bold text-white rounded-sm">
           <div className="flex flex-col items-center justify-center w-full space-y-6 ">
-            <a href="#" className="w-full text-center">
+            <NavLink to="/home" className="w-full text-center">
               Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="pricing.html" className="w-full text-center">
+            </NavLink>
+            <NavLink
+              to="/pricing"
+              replace={true}
+              reloadDocument={true}
+              className="w-full text-center"
+            >
               Pricing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="contactus.html" className="w-full text-center">
+            </NavLink>
+            <NavLink to="/contact" className="w-full text-center">
               Contact us
-            </a>
+            </NavLink>
             <a
               href="#"
               className="w-full pt-6 border-t border-gray-400 text-center hover:text-white"

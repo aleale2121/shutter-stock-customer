@@ -1,28 +1,29 @@
-import  img  from "/assets/images/illustration-working.svg";
+// import img from "/assets/images/illustration-working.svg";
+// import { NavLink } from "react-router-dom";
+
 export default function Hero() {
   return (
-    <div className="container flex flex-col-reverse mx-auto p-6 lg:flex-row">
-      <div className="flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52">
-        <h1 className="text-5xl font-bold text-center lg:text-6xl lg:max-w-md lg:text-left">
-          More than just shorter links
-        </h1>
-        <p className="text-2xl text-center text-gray-400 lg:max-w-md lg:text-left">
-          Build your brands recognition and get detailed insights on how your
-          links are performing.
+    <div className="container flex flex-row items-center justify-center mt-24 mb-24 mx-auto p-6 lg:flex-row">
+      <div className="container mx-auto px-3">
+        <h2 className="text-4xl mb-6 font-bold text-center">
+          Perfect Content at the Perfect Price
+        </h2>
+        <p className="max-w-xs mx-auto text-center text-gray-400 md:max-w-md">
+          Fuel your creativity with high-quality video, audio, and photos. Our
+          extensive library offers a world of possibilities, all at accessible
+          prices.
         </p>
-        <div className="mx-auto lg:mx-0">
-          <a
-            href="./pricing.html"
+        {/* <NavLink
+            to="/pricing"
             className="py-5 px-10 text-2xl font-bold text-white bg-cyan rounded-full lg:py-4 hover:opacity-70"
           >
             Get Started
-          </a>
-        </div>
+          </NavLink> */}
       </div>
 
-      <div className="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
+      {/* <div className="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
         <img src={img} alt="" />
-      </div>
+      </div> */}
     </div>
   );
 }

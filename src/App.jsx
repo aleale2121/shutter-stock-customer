@@ -5,6 +5,8 @@ import Contacts from "./pages/Contacts";
 import Pricing from "./pages/Pricing";
 import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
+import 'flowbite/dist/flowbite.min.js';
+
 function App() {
   return (
     <>
@@ -16,7 +18,7 @@ function App() {
             <Route path="home" element={<Guests />} />
             <Route path="contact" element={<Contacts />} />
             {/* <Route path="bookings/:bookingId" element={<Booking />} /> */}
-            <Route path="pricing" element={<Pricing />} />
+            <Route path="/pricing" element={<Pricing />} replace/>
             <Route path="profile" element={<Profile />} />
           </Route>
 
