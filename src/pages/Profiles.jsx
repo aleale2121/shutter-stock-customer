@@ -2,14 +2,14 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 // import GuestProfile from "../features/profile/GuestProfile";
 // import ProfileComponent from "../features/profile/ProfileComponent";
-import Settings from "../features/profile/Settings";
+import Profile from "../features/profile/Profile";
 
-export default function Profile() {
+export default function Profiles() {
   return (
     <>
       <NavBar />
       <section id="profile">
-        <Settings />
+        <Profile />
       </section>
       <Footer />
     </>
