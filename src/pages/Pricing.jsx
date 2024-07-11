@@ -76,10 +76,10 @@ export default function Pricing() {
   return (
     <>
       <NavBar />
-      <section id="header" className="py-24 bg-gray-100">
+      <section id="header" className="pt-16 pb-16 bg-gray-100">
         <Header />
       </section>
-      <section id="pricing" className="pb-32 bg-gray-100">
+      <section id="pricing" className="pb-32 bg-white">
         <div className="container flex flex-col md:mx-auto items-center justify-center">
           <PricingTabs />
           <PricingMenu>

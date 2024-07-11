@@ -1,16 +1,16 @@
 export default function ContactForm() {
   return (
-    <form className="container flex flex-col max-w-sm  md:max-w-md mx-auto mt-16 bg-white p-8 rounded-md">
+    <form className="container flex flex-col max-w-sm  md:max-w-md mx-auto mt-4 px-8 py-4 rounded-md text-[#202142]">
       <label
         htmlFor="email-address-icon"
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block text-sm font-medium text-indigo-900 dark:text-white"
       >
         Your Email
       </label>
       <div className="relative mb-8">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
           <svg
-            className="w-4 h-4 text-gray-500 dark:text-gray-400"
+            className="w-4 h-4 text-indigo-500 dark:text-indigo-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -23,20 +23,15 @@ export default function ContactForm() {
         <input
           type="text"
           id="email-address-icon"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
-          placeholder="name@flowbite.com"
+          className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-md rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full ps-10 px-6 py-2.5"
+          placeholder="name@gmail.com"
         />
       </div>
-      <label
-        htmlFor="message"
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >
-        Your message
-      </label>
+     
       <textarea
         id="message"
-        rows="4"
-        className="mb-8 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+        rows="6"
+        className="mb-8 block p-3 px-6 w-full text-md text-indigo-900 bg-indigo-50 rounded-lg border border-indigo-300 focus:ring-indigo-500 focus:border-indigo-500"
         placeholder="Leave a comment..."
       ></textarea>
       <div>

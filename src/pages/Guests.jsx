@@ -5,7 +5,8 @@ import SearchForm from "../features/guests/SearchForm";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import HorizontalTagsList from "../components/HorizontalTagsList";
-const tags = ['React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS', 'Node.js', 'Express', 'MongoDB', 'GraphQL', 'TypeScript'];
+const tags = [
+    'React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS', 'Node.js', 'Express', 'MongoDB', 'GraphQL', 'TypeScript','Home',"SUM","Hallo","Test"];
 
 const data = [
   {

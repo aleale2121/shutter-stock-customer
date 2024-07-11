@@ -2,12 +2,14 @@ export default function SearchForm() {
   return (
     <form
       id="link-form"
-      className="relative flex flex-col w-full p-10 -mt-20 space-y-4 bg-darkViolet rounded-lg md:flex-row md:space-y-0 md:space-x-3"
+      className="relative flex flex-col w-full px-2 -mt-12 space-y-4 
+  rounded-lg md:flex-row md:space-y-0"
     >
       <div className="relative group">
         <select
           id="dropdown-select"
-          className="select-arrow  inline-flex justify-center w-full px-4 py-4 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500  appearance-none pr-10"
+          className="select-arrow inline-flex justify-center w-full px-4 py-4 text-md font-small text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none appearance-none pr-10
+      md:rounded-none md:rounded-l-md md:outline-none"
         >
           <option
             className="block px-4 py-2 text-gray-700 cursor-pointer"
@@ -32,12 +34,12 @@ export default function SearchForm() {
 
       <input
         type="text"
-        className="flex-1 p-3 border-2 rounded-lg placeholder-yellow-500 focus:outline-none"
+        className="flex-1 p-3 border-2 rounded-lg placeholder-gray-500 focus:outline-none md:rounded-none md:outline-none"
         placeholder="Search..."
         id="link-input"
       />
 
-      <button className="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight focus:outline-none md:py-2">
+      <button className="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight focus:outline-none md:py-2 md:rounded-none md:rounded-r-md md:outline-none">
         Search
       </button>
 
