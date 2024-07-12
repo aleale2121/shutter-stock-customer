@@ -17,16 +17,16 @@ const HorizontalTagsList = ({ tags }) => {
   };
 
   return (
-    <div className="flex flex-row space-x-2 mx-auto items-center justify-start overflow-x-auto py-2 px-2 bg-gray-100 rounded-lg custom-scrollbar">
+    <div className="flex flex-row space-x-2 mx-auto items-center justify-start overflow-x-auto py-2 px-2 rounded-lg custom-scrollbar">
       {tags.map((tag, index) => (
         <span
           key={index}
           onClick={() => handleTagClick(tag)}
           className={`${
             selectedTags.has(tag)
-              ? "bg-indigo-900 text-white"
-              : "bg-indigo-500 text-white hover:bg-indigo-700"
-          } px-3 py-1 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap`}
+              ? "bg-teal-600 text-white"
+              : "bg-gray-300 text-gray-800 hover:bg-teal-500 hover:text-white"
+          } px-3 py-1 rounded-full text-sm font-lg cursor-pointer whitespace-nowrap`}
         >
           {tag}
         </span>

@@ -20,7 +20,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className="relative container mx-auto px-6  bg-veryDarkViolet">
+    <nav className="relative container mx-auto px-6 bg-veryDarkViolet">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-20">
           <div className="w-60 max-w-full px-4">

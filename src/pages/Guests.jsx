@@ -104,10 +104,10 @@ export default function Guests() {
       </section>
 
       <section id="media" className="relative bg-gray-100">
-        <div className="container max-w-5xl mx-auto p-6 space-y-6">
+        <div className="container max-w-6xl mx-auto p-6 space-y-6">
           <SearchForm />
           <HorizontalTagsList tags={tags}/>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-2 md:grid-cols-3">
             {data.map((item) => (
               <MediaCard
                 key={item.id}

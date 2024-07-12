@@ -7,18 +7,18 @@ export default function MediaCard({ mediaSrc, name, description, type }) {
   return (
     <Modal>
       <Modal.Open opens="media">
-        <div className="relative group w-72">
+        <div className="relative group w-[22rem] h-[14rem]">
           {type === "image" ? (
             <img
               src={mediaSrc}
               alt={name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover overflow-auto"
             />
           ) : (
               <video
                 src={mediaSrc}
                 // controls
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover overflow-auto"
               />
           )}
           <div className="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
