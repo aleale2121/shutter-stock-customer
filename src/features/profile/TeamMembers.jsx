@@ -2,7 +2,7 @@ import Wrapper from "./Wrapper";
 
 export default function TeamMembers() {
   return (
-    <Wrapper>
+    <Wrapper width="6xl">
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
           <table className="min-w-full bg-white">
             <thead className="bg-[#505285]">

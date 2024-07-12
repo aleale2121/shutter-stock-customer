@@ -21,7 +21,6 @@ function App() {
             <Route path="/contact" element={<Contacts />} />
             <Route path="/members" element={<Members />} />
             <Route path="/notifications" element={<Notification />} />
-            {/* <Route path="bookings/:bookingId" element={<Booking />} /> */}
             <Route path="/pricing" element={<Pricing />} replace />
             <Route path="/profile" element={<Profiles />} />
             <Route path="/subscription" element={<Subscription />} />
