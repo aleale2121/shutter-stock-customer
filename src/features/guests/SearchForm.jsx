@@ -2,7 +2,7 @@ export default function SearchForm() {
   return (
     <form
       id="link-form"
-      className="relative flex flex-col w-full px-2 -mt-12 space-y-4 
+      className="relative flex flex-col w-full -mt-12 space-y-4 shadow-xl
   rounded-lg md:flex-row md:space-y-0"
     >
       <div className="relative group">
@@ -34,7 +34,7 @@ export default function SearchForm() {
 
       <input
         type="text"
-        className="flex-1 p-3 border-2 rounded-lg placeholder-gray-500 focus:outline-none md:rounded-none md:outline-none"
+        className="flex-1 p-3 border-t-1 border-b-1 border-gray-300 rounded-lg placeholder-gray-500 focus:outline-none md:rounded-none md:outline-none"
         placeholder="Search..."
         id="link-input"
       />
