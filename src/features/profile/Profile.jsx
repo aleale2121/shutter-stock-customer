@@ -4,12 +4,16 @@ import UpdateProfile from "./UpdateProfile";
 
 export default function Profile() {
   return (
-    <Wrapper>
+    <Wrapper width="4xl">
       <>
-        <h2 className="pl-6 text-2xl font-bold sm:text-xl">Public Profile</h2>
-        <UpdateProfile />
-        <h2 className="mt-8 text-2xl font-bold sm:text-xl">Update password</h2>
-        <UpdatePassword />
+        <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
+          <h1 className="text-2xl font-semibold sm:text-xl">Public Profile</h1>
+          <UpdateProfile />
+        </div>
+        <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 mt-8">
+          <h1 className="text-2xl font-semibold sm:text-xl">Update password</h1>
+          <UpdatePassword />
+        </div>
       </>
     </Wrapper>
   );

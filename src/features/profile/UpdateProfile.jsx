@@ -1,3 +1,6 @@
+import SettingButton from "./SettingButton";
+
+
 export default function UpdateProfile() {
   return (
     <div className="grid max-w-2xl mx-auto mt-8">
@@ -109,12 +112,7 @@ export default function UpdateProfile() {
         </div>
 
         <div className="flex justify-end">
-          <button
-            type="submit"
-            className="text-white bg-indigo-700  hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800"
-          >
-            Save
-          </button>
+          <SettingButton>Save</SettingButton>
         </div>
       </div>
     </div>

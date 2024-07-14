@@ -22,7 +22,7 @@ export default function TeamMemberTableMenu({ id }) {
 
       <Modal.Window name="delete-notification">
         <ConfirmDelete
-          resourceName="contact"
+          resourceName="member"
           disabled={false}
           onConfirm={() => {}}
         />

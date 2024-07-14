@@ -2,28 +2,33 @@ import Tag from "../../components/Tag";
 import Wrapper from "./Wrapper";
 import Menus from "../../components/Menus";
 import TeamMemberTableMenu from "./TeamMemberTableMenu";
+import SettingButton from "./SettingButton";
 
 export default function TeamMembers() {
   return (
-    <Wrapper width="6xl">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+    <Wrapper width="4xl">
+      <div className="bg-white border border-gray-200 shadow-md border-lg rounded-xl p-8 max-w-lg md:max-w-4xl mx-auto mt-6">
+        <div className="flex justify-between mb-4">
+          <h1 className="text-2xl font-semibold ">Team Members</h1>
+          <SettingButton>Invite</SettingButton>
+        </div>
         <Menus>
-          <table className="min-w-full bg-white">
+          <table className="w-full bg-gray-50 p-4 rounded-lg overflow-hidden">
             <thead className="bg-sky-950">
               <tr>
-                <th className="w-6/25 py-4 px-3 text-left text-sm font-semibold text-white">
+                <th className="py-4 px-4 text-left text-sm font-semibold text-white">
                   Full Name
                 </th>
-                <th className="w-6/25 py-4 px-3 text-left text-sm font-semibold text-white">
+                <th className="py-4 px-3 text-left text-sm font-semibold text-white">
                   Email
                 </th>
-                <th className="w-6/25 py-4 px-3 text-left text-sm font-semibold text-white">
-                  Used assets
+                <th className="py-4 px-3 text-left text-sm font-semibold text-white">
+                  Downloads
                 </th>
-                <th className="w-6/25 py-4 px-3 text-left text-sm font-semibold text-white">
+                <th className="py-4 px-3 text-left text-sm font-semibold text-white">
                   Status
                 </th>
-                <th className="w-1/25"></th>
+                <th className="pr-2"></th>
               </tr>
             </thead>
             <tbody>
@@ -34,7 +39,7 @@ export default function TeamMembers() {
                 </td>
                 <td className="py-3 px-4 mx-auto text-md text-gray-700">25</td>
                 <td className="py-3 px-4 ">
-                  <Tag bgColor="bg-lime-600" textColor="text-stone-100">
+                  <Tag bgColor="bg-green-200" textColor="text-green-900">
                     Active
                   </Tag>
                 </td>
@@ -49,7 +54,7 @@ export default function TeamMembers() {
                 </td>
                 <td className="py-3 px-4 text-md text-gray-700">13</td>
                 <td className="py-3 px-4 ">
-                  <Tag bgColor="bg-[#ef4444]" textColor="text-stone-100">
+                  <Tag bgColor="bg-red-300" textColor="text-red-900">
                     Inactive
                   </Tag>
                 </td>
@@ -64,7 +69,7 @@ export default function TeamMembers() {
                 </td>
                 <td className="py-3 px-4 text-md text-gray-700">47</td>
                 <td className="py-3 px-4 ">
-                  <Tag bgColor="bg-blue-800" textColor="text-stone-100">
+                  <Tag bgColor="bg-blue-300" textColor="text-blue-900">
                     Pending
                   </Tag>
                 </td>
@@ -79,7 +84,7 @@ export default function TeamMembers() {
                 </td>
                 <td className="py-3 px-4 text-md text-gray-700">7</td>
                 <td className="py-3 px-4 ">
-                  <Tag bgColor="bg-lime-600" textColor="text-stone-100">
+                  <Tag bgColor="bg-green-200" textColor="text-green-800">
                     Active
                   </Tag>
                 </td>
