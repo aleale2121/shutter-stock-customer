@@ -3,11 +3,11 @@ import Wrapper from "./Wrapper";
 export default function NotificationList() {
   return (
     <Wrapper width="4xl">
-      <div className="bg-gray-100 shadow-sm  rounded-lg p-6 max-w-lg md:max-w-4xl mx-auto mt-6">
+      <div className="bg-white shadow-sm border border-gray-200 rounded-lg p-6 max-w-lg md:max-w-4xl mx-auto mt-6">
         <h1 className="text-2xl font-semibold px-3">Notifications</h1>
         <div className="overflow-hidden space-y-4 p-4">
-          <div className="bg-white rounded-lg flex items-center px-6 py-4 ">
-            <div className="w-10 h-10 bg-green-100 text-green-500 rounded-full flex items-center justify-center">
+          <div className="bg-gray-50 border border-gray-200 shadow-sm rounded-lg flex items-center px-6 py-4 ">
+            <div className="w-10 h-10 bg-green-200 text-green-500 border border-green-400 rounded-full flex items-center justify-center">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -25,16 +25,16 @@ export default function NotificationList() {
             </div>
             <div className="ml-4">
               <p className="text-sm font-semibold text-gray-800">
-                User approved Invitation
+                Tomas@gmail.com approved Invitation
               </p>
               <p className="text-sm text-gray-600">
-                You have successfully approved the invitation.
+                Tomas have successfully approved the invitation.
               </p>
             </div>
           </div>
 
-          <div className="bg-white  rounded-lg  flex items-center px-6 py-4 ">
-            <div className="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center">
+          <div className="bg-gray-50 border border-gray-200 shadow-sm  rounded-lg  flex items-center px-6 py-4 ">
+            <div className="w-10 h-10 bg-blue-100 text-blue-500 border border-blue-400  rounded-full flex items-center justify-center">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -60,8 +60,8 @@ export default function NotificationList() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl flex items-center px-6 py-4">
-            <div className="w-10 h-10 bg-red-100 text-red-500 rounded-full flex items-center justify-center">
+          <div className="bg-gray-50 border border-gray-200 shadow-sm  rounded-lg flex items-center px-6 py-4">
+            <div className="w-10 h-10 bg-red-100 text-red-500 border border-red-300 rounded-full flex items-center justify-center">
               <svg
                 className="w-6 h-6"
                 fill="none"
