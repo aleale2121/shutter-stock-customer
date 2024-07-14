@@ -5,7 +5,7 @@ import { FaBookmark } from "react-icons/fa";
 const MediaInfoCard = ({ mediaType, mediaSrc, title, description }) => {
   return (
     <div
-      className="mx-auto bg-white shadow-md rounded-lg overflow-hidden flex"
+      className="mx-auto bg-white  rounded-lg overflow-hidden flex"
       style={{ width: "60rem" }}
     >
       <div className="w-2/3 relative">
