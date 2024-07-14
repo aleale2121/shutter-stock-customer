@@ -1,66 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiEllipsisVertical } from "react-icons/hi2";
-import styled from "styled-components";
 import { useOutsideClick } from "../hooks/useOutsideClick";
 import PropTypes from "prop-types";
-
-const Menu = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-const StyledToggle = styled.button`
-  background: none;
-  border: none;
-  padding: 0.4rem;
-  border-radius: 5px;
-  transform: translateX(0.8rem);
-  transition: all 0.2s;
-  &:hover {
-    background-color: #f3f4f6;
-  }
-  & svg {
-    width: 1.8rem;
-    height: 1.8rem;
-    color: #374151;
-  }
-`;
-
-const StyledList = styled.ul`
-  position: fixed;
-  background-color: #fff;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-
-  border-radius: 8px;
-  right: ${(props) => props.position.x}px;
-  top: ${(props) => props.position.y}px;
-`;
-
-const StyledButton = styled.button`
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 1rem 1.4rem;
-  font-size: 1rem;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  background-color: #fff;
-  &:hover {
-    background-color: #f3f4f6;
-  }
-  & svg {
-    width: 1.1rem;
-    height: 1.6rem;
-    color: #9ca3af;
-    transition: all 0.3s;
-  }
-`;
 
 const MenusContext = createContext();
 
@@ -79,6 +21,11 @@ function Menus({ children }) {
 }
 Menus.propTypes = { children: PropTypes.node.isRequired };
 
+function Menu({ children }) {
+  return <div className="flex items-center justify-end">{children}</div>;
+}
+Menu.propTypes = { children: PropTypes.node.isRequired };
+
 function Toggle({ id }) {
   const { openId, close, open, setPosition } = useContext(MenusContext);
   function handleClick(e) {
@@ -91,9 +38,12 @@ function Toggle({ id }) {
     openId === "" || openId !== id ? open(id) : close();
   }
   return (
-    <StyledToggle onClick={handleClick}>
-      <HiEllipsisVertical />
-    </StyledToggle>
+    <button
+      className="bg-none border-none p-2 rounded transition-all hover:bg-gray-200"
+      onClick={handleClick}
+    >
+      <HiEllipsisVertical className="w-7 h-7 text-gray-700" />
+    </button>
   );
 }
 Toggle.propTypes = { id: PropTypes.string.isRequired };
@@ -103,9 +53,13 @@ function List({ id, children }) {
   const ref = useOutsideClick(close, false);
   if (openId !== id) return null;
   return createPortal(
-    <StyledList position={position} ref={ref}>
+    <ul
+      className="fixed bg-white shadow-lg rounded-lg"
+      style={{ right: `${position.x}px`, top: `${position.y}px` }}
+      ref={ref}
+    >
       {children}
-    </StyledList>,
+    </ul>,
     document.body
   );
 }
@@ -122,10 +76,13 @@ function Button({ children, icon, onClick }) {
   }
   return (
     <li>
-      <StyledButton onClick={handleClick}>
+      <button
+        className="w-full text-left bg-none border-none p-4 text-lg transition-all flex items-center gap-3 hover:bg-gray-200 rounded-lg"
+        onClick={handleClick}
+      >
         {icon}
         <span>{children}</span>
-      </StyledButton>
+      </button>
     </li>
   );
 }
