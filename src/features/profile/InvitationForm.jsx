@@ -1,8 +1,8 @@
 export default function InvitationForm() {
   return (
-    <form className="container flex flex-col max-w-sm md:max-w-lg mx-auto   rounded-md text-[#202142]">
-      <h1 className="text-2xl font-semibold mb-2">Enter Email</h1>
-      <div className="relative mb-8">
+    <form className="container flex flex-col px-16 py-12 max-w-sm md:max-w-lg mx-auto  rounded-md text-[#202142]">
+      <h1 className="text-2xl font-semibold mb-3">Enter Email</h1>
+      <div className="relative mb-6">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
           <svg
             className="w-4 h-4 text-indigo-500 dark:text-indigo-400"
