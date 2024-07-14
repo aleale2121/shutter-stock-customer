@@ -6,7 +6,65 @@ import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import HorizontalTagsList from "../components/HorizontalTagsList";
 const tags = [
-    'React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS', 'Node.js', 'Express', 'MongoDB', 'GraphQL', 'TypeScript','Home',"SUM","Hallo","Test"];
+  "trailer",
+  "official video",
+  "music video",
+  "documentary",
+  "interview",
+  "vlog",
+  "short film",
+  "animated",
+  "live",
+  "tutorial",
+  "review",
+  "demo",
+  "highlights",
+  "behind the scenes",
+  "comedy",
+  "action",
+  "drama",
+  "thriller",
+  "animation",
+  "family",
+  "sports",
+  "funny",
+  "reaction",
+  "meme",
+  "animation",
+  "cute",
+  "happy",
+  "sad",
+  "angry",
+  "excited",
+  "fail",
+  "win",
+  "art",
+  "animals",
+  "nature",
+  "sports",
+  "movies",
+  "tv",
+  "dancing",
+  "gaming",
+  "portrait",
+  "landscape",
+  "nature",
+  "cityscape",
+  "architecture",
+  "macro",
+  "abstract",
+  "minimalism",
+  "vintage",
+  "food",
+  "travel",
+  "fashion",
+  "sports",
+  "animals",
+  "objects",
+  "textures",
+  "patterns",
+  "backgrounds",
+];
 
 const data = [
   {
@@ -106,7 +164,7 @@ export default function Guests() {
       <section id="media" className="relative bg-gray-100">
         <div className="container max-w-6xl mx-auto p-6 space-y-6">
           <SearchForm />
-          <HorizontalTagsList tags={tags}/>
+          <HorizontalTagsList tags={tags} />
           <div className="grid gap-2 md:grid-cols-3">
             {data.map((item) => (
               <MediaCard
