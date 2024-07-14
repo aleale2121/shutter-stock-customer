@@ -1,3 +1,6 @@
+import aspectRatio from "@tailwindcss/aspect-ratio";
+import flowbitePlugin from "flowbite/plugin";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -22,11 +25,24 @@ export default {
           DEFAULT: "hsl(180, 66%, 49%)", // custom cyan color
           light: "hsl(180, 66%, 69%)", // custom cyanLight color
         },
+        red: {
+          DEFAULT: "hsl(0, 87%, 67%)",
+          50: "#fef2f2",
+          100: "#fee2e2",
+          200: "#fecaca",
+          300: "#fca5a5",
+          400: "#f87171",
+          500: "#ef4444",
+          600: "#dc2626",
+          700: "#b91c1c",
+          800: "#991b1b",
+          900: "#7f1d1d",
+          950: "#450a0a",
+        },
         cyanLight: "hsl(180, 66%, 69%)",
         darkViolet: "hsl(257, 27%, 26%)",
         darkBlue: "rgb(55 88 249)",
         dark2: "rgb(31 42 55)",
-        red: "hsl(0, 87%, 67%)",
         grayishViolet: "hsl(257, 7%, 63%)",
         veryDarkBlue: "hsl(255, 11%, 22%)",
         veryDarkViolet: "hsl(260, 8%, 14%) ",
@@ -87,5 +103,5 @@ export default {
       },
     },
   },
-  plugins: ["flowbite/plugin", require("@tailwindcss/aspect-ratio")],
+  plugins: [flowbitePlugin, aspectRatio],
 };
