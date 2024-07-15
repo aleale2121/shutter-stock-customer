@@ -5,11 +5,11 @@ export default function Signup() {
     <div className="flex items-center justify-center">
       {/* <!-- Card Container --> */}
       <div
-        className="mx-6 my-4 flex flex-col space-y-10 bg-white shadow-2xl rounded-2xl 
+        className="mx-6 my-4 flex flex-col space-y-10 bg-white  border border-gray-200 shadow-2xl rounded-2xl 
           md:flex-row md:items-center md:w-3/4 md:justify-center md:space-y-0 md:mb-10 overflow-hidden"
       >
         {/* <!-- Left Side --> */}
-        <div className="p-6 md:pl-16 md:pt-12 md:w-3/5">
+        <div className="p-6 md:pl-16 md:pt-4 md:w-3/5">
           {/* <!-- Top Content --> */}
           <h2 className="font-mono mb-4 text-3xl font-bold">Sign up</h2>
           <p className="max-w-sm mb-6 font-sans font-light text-gray-600">

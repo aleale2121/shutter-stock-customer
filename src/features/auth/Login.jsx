@@ -4,7 +4,7 @@ export default function Login() {
     // <!-- Global Container -->
     <div className="flex items-center justify-center">
       {/* <!-- Card Container --> */}
-      <div className="mx-6 my-4 flex flex-col space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:mb-10 overflow-hidden">
+      <div className="mx-6 my-4 flex flex-col space-y-10 bg-white shadow-2xl border border-gray-200 rounded-2xl md:flex-row md:space-y-0 md:mb-10 overflow-hidden">
         {/* <!-- Left Side --> */}
         <div className="p-6 md:pl-16 md:pt-12">
           {/* <!-- Top Content --> */}
@@ -56,7 +56,7 @@ export default function Login() {
           </div>
           <div className="mt-4 text-right">
             <NavLink
-              href="/signup"
+              to="/signup"
               className="text-sm font-thin text-cyan-700"
             >
               Signup if you dont have an account

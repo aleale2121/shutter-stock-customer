@@ -1,7 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  HiUserCircle,
+  HiOutlineArrowRightCircle,
+  HiOutlineCog8Tooth,
+} from "react-icons/hi2";
 
 export default function NavBar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   useEffect(() => {
     const btn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
@@ -18,6 +25,10 @@ export default function NavBar() {
       btn.removeEventListener("click", navToggle);
     };
   }, []);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <nav className="relative container mx-auto px-6 bg-veryDarkViolet">
@@ -52,15 +63,34 @@ export default function NavBar() {
         </div>
 
         <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-          <NavLink to="/login" className="hover:text-white">
-            Login
-          </NavLink>
-          <NavLink
-            to="/signup"
-            className="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70"
-          >
-            Sign Up
-          </NavLink>
+          <div className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="flex items-center px-4 py-2 rounded-full hover:opacity-70"
+            >
+              <HiUserCircle className="w-6 h-6 rounded-full" />
+              <span className="ml-2">Profile</span>
+            </button>
+            {dropdownOpen && (
+              <div className="absolute right-0 w-32 py-2 mt-2 bg-gray-100 rounded-md shadow-xl">
+                <NavLink
+                  to="/profile"
+                  className="flex flex-row justify-evenly items-center px-2 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  <HiOutlineCog8Tooth className="text-gray-950 text-2xl" />
+                  Settings
+                </NavLink>
+
+                <NavLink
+                  to="/login"
+                  className="flex flex-row justify-evenly items-center px-2 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  <HiOutlineArrowRightCircle className="text-gray-950 text-2xl" />
+                  Logout&nbsp;&nbsp;
+                </NavLink>
+              </div>
+            )}
+          </div>
         </div>
 
         <button
@@ -95,18 +125,12 @@ export default function NavBar() {
             <NavLink to="/contact" className="w-full text-center">
               Contact us
             </NavLink>
-            <a
-              href="#"
+            <NavLink
+              to="/logout"
               className="w-full pt-6 border-t border-gray-400 text-center hover:text-white"
             >
-              Login &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a>
-            <a
-              href="#"
-              className="w-full py-3 text-center rounded-full bg-cyan"
-            >
-              Sign Up
-            </a>
+              Logout
+            </NavLink>
           </div>
         </div>
       </div>
