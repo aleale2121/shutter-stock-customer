@@ -14,13 +14,13 @@ export default function TeamMemberTableMenu({ id }) {
             See details
           </Menus.Button>
 
-          <Modal.Open opens="delete-notification">
+          <Modal.Open opens="delete-member">
             <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
           </Modal.Open>
         </Menus.List>
       </Menus.Menu>
 
-      <Modal.Window name="delete-notification">
+      <Modal.Window name="delete-member">
         <ConfirmDelete
           resourceName="member"
           disabled={false}

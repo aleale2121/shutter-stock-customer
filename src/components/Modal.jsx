@@ -15,6 +15,7 @@ const StyledModal = styled.div`
   box-shadow: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12);
   /* padding: 3.2rem 4rem; */
   transition: all 0.5s;
+  border: 1px solid #e5e7eb;
 `;
 
 const Overlay = styled.div`
