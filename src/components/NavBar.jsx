@@ -52,15 +52,15 @@ export default function NavBar() {
         </div>
 
         <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-          <a href="#" className="hover:text-white">
+          <NavLink to="/login" className="hover:text-white">
             Login
-          </a>
-          <a
-            href="#"
+          </NavLink>
+          <NavLink
+            to="/signup"
             className="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70"
           >
             Sign Up
-          </a>
+          </NavLink>
         </div>
 
         <button
