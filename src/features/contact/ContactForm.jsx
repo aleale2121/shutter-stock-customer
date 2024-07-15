@@ -1,12 +1,7 @@
 export default function ContactForm() {
   return (
     <form className="container flex flex-col max-w-sm  md:max-w-md mx-auto mt-4 px-8 py-4 rounded-md text-[#202142]">
-      <label
-        htmlFor="email-address-icon"
-        className="block text-sm font-medium text-indigo-900 dark:text-white"
-      >
-        Your Email
-      </label>
+   
       <div className="relative mb-8">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
           <svg
@@ -34,8 +29,8 @@ export default function ContactForm() {
         className="mb-8 block p-3 px-6 w-full text-md text-indigo-900 bg-indigo-50 rounded-lg border border-indigo-300 focus:ring-indigo-500 focus:border-indigo-500"
         placeholder="Leave a comment..."
       ></textarea>
-      <div>
-        <button className="px-10 py-5 mx-auto text-2xl font-bold text-white rounded-full bg-cyan hover:bg-cyanLlight md:text-base md:py-3 focus:outline-none">
+      <div className="flex justify-end">
+        <button className="px-10 py-5 text-2xl font-bold text-white rounded-full bg-cyan hover:bg-cyanLlight md:text-base md:py-3 focus:outline-none">
           Submit
         </button>
       </div>

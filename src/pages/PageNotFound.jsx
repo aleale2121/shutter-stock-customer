@@ -1,5 +1,7 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import { NavLink } from "react-router-dom";
+
 
 export default function PageNotFound() {
   return (
@@ -19,12 +21,12 @@ export default function PageNotFound() {
                 <p className="mb-8 text-lg text-veryDarkViolet">
                   The page you are looking for it maybe deleted
                 </p>
-                <a
-                  href="#"
+                <NavLink
+                  to="/home"
                   className="inline-block rounded-lg border border-veryDarkViolet px-8 py-3 text-center text-base font-semibold text-veryDarkViolet transition hover:bg-veryDarkViolet hover:text-white"
                 >
                   Go To Home
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

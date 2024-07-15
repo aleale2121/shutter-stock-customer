@@ -5,7 +5,7 @@ export default function InvitationForm() {
       <div className="relative mb-6">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
           <svg
-            className="w-4 h-4 text-indigo-500 dark:text-indigo-400"
+            className="w-4 h-4 text-gray-500 dark:text-indigo-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -18,7 +18,7 @@ export default function InvitationForm() {
         <input
           type="text"
           id="email-address-icon"
-          className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-md rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full ps-10 px-12 py-2.5"
+          className="bg-indigo-50 border border-indigo-100 text-indigo-400 text-md rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full ps-10 px-12 py-2.5"
           placeholder="name@gmail.com"
         />
       </div>

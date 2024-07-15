@@ -3,6 +3,7 @@ import Wrapper from "./Wrapper";
 import Menus from "../../components/Menus";
 import TeamMemberTableMenu from "./TeamMemberTableMenu";
 import SettingButton from "./SettingButton";
+import { HiOutlineMinus } from "react-icons/hi2";
 
 export default function TeamMembers() {
   return (
@@ -52,7 +53,9 @@ export default function TeamMembers() {
                 <td className="py-3 px-4 text-md text-gray-700">
                   bob@example.com
                 </td>
-                <td className="py-3 px-4 text-md text-gray-700">13</td>
+                <td className="py-3 px-4 text-md text-gray-700">
+                  <HiOutlineMinus />
+                </td>
                 <td className="py-3 px-4 ">
                   <Tag bgColor="bg-red-300" textColor="text-red-900">
                     Inactive
@@ -67,7 +70,10 @@ export default function TeamMembers() {
                 <td className="py-3 px-4 text-md text-gray-700">
                   carol@example.com
                 </td>
-                <td className="py-3 px-4 text-md text-gray-700">47</td>
+                <td className="py-3 px-4 text-md text-gray-700">
+                  {" "}
+                  <HiOutlineMinus />
+                </td>
                 <td className="py-3 px-4 ">
                   <Tag bgColor="bg-blue-300" textColor="text-blue-900">
                     Pending

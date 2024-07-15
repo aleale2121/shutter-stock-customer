@@ -6,7 +6,7 @@ export default function Contacts() {
   return (
     <>
       <NavBar />
-      <section id="contactus" className="py-12 bg-white">
+      <section id="contactus" className="py-12 bg-gray-100">
         <Contact />
       </section>
       <Footer />
