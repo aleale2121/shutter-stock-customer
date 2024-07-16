@@ -14,7 +14,6 @@ export function LowerContainer({ pricing }) {
         <div className="flex justify-center">
           <RightIcon />
           <span className="text-sm ml-1">
-            {" "}
             Up to {pricing.downloads}X downloads
           </span>
         </div>
