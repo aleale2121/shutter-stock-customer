@@ -5,7 +5,7 @@ export default function UpdatePassword() {
         <div className="mb-2 sm:mb-6">
           <label
             htmlFor="password"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             Current Password
           </label>
@@ -21,7 +21,7 @@ export default function UpdatePassword() {
         <div className="mb-2 sm:mb-6">
           <label
             htmlFor="new-password"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             New Password
           </label>
@@ -36,7 +36,7 @@ export default function UpdatePassword() {
         <div className="mb-2 sm:mb-6">
           <label
             htmlFor="confirm-password"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             Confirm new password
           </label>

@@ -28,11 +28,11 @@ export default function UpdateProfile() {
       </div>
 
       <div className="items-center mt-8 sm:mt-14 text-[#202142]">
-        <div className="flex flex-col items-center w-full mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 sm:mb-6">
+        <div className="flex flex-col items-center w-full mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0 sm:mb-6 md:space-y-0">
           <div className="w-full">
             <label
               htmlFor="first_name"
-              className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-indigo-900 "
             >
               Your first name
             </label>
@@ -41,7 +41,7 @@ export default function UpdateProfile() {
               id="first_name"
               className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
               placeholder="Your first name"
-              value="Jane"
+              defaultValue="Jane"
               required
             />
           </div>
@@ -49,7 +49,7 @@ export default function UpdateProfile() {
           <div className="w-full">
             <label
               htmlFor="last_name"
-              className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-indigo-900 "
             >
               Your last name
             </label>
@@ -58,7 +58,7 @@ export default function UpdateProfile() {
               id="last_name"
               className="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
               placeholder="Your last name"
-              value="Ferguson"
+              defaultValue="Ferguson"
               required
             />
           </div>
@@ -67,7 +67,7 @@ export default function UpdateProfile() {
         <div className="mb-2 sm:mb-6">
           <label
             htmlFor="email"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             Your email
           </label>
@@ -82,8 +82,9 @@ export default function UpdateProfile() {
 
         <div className="mb-2 sm:mb-6">
           <label
+            type="text"
             htmlFor="profession"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             Profession
           </label>
@@ -99,7 +100,7 @@ export default function UpdateProfile() {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className="block mb-2 text-sm font-medium text-indigo-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-indigo-900 "
           >
             Bio
           </label>
