@@ -1,8 +1,17 @@
 import PropTypes from "prop-types";
-import { FaBookmark } from "react-icons/fa";
+import { FaBookmark, FaHeart, FaShare } from "react-icons/fa";
 
-
-const MediaInfoCard = ({ mediaType, mediaSrc, title, description }) => {
+const MediaInfoCard = ({
+  mediaType,
+  mediaSrc,
+  title,
+  description,
+  liked,
+  bookmarked,
+  toggleLike,
+  toggleBookmark,
+  share,
+}) => {
   return (
     <div
       className="mx-auto bg-white  rounded-lg overflow-hidden flex"
@@ -19,11 +28,34 @@ const MediaInfoCard = ({ mediaType, mediaSrc, title, description }) => {
           <video
             src={mediaSrc}
             controls
+            autoPlay
+            autoFocus
             className="w-full h-full object-cover"
           ></video>
         )}
-        <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow">
-          <FaBookmark className="text-gray-600" />
+        <div className="absolute top-2 right-2 flex flex-row space-x-2">
+          <div
+            className="bg-white p-2 rounded-full shadow"
+            onClick={toggleBookmark}
+          >
+            <FaBookmark
+              className={`${bookmarked ? "text-yellow-500" : "text-gray-600"}`}
+            />
+          </div>
+          <div
+            className="bg-white p-2 rounded-full shadow"
+            onClick={toggleLike}
+          >
+            <FaHeart
+              className={`${liked ? "text-red-500" : "text-gray-600"}`}
+            />
+          </div>
+          <div
+            onClick={share}
+            className="bg-white p-2 rounded-full shadow"
+          >
+            <FaShare className="text-gray-600" />
+          </div>
         </div>
       </div>
 
@@ -56,6 +88,11 @@ MediaInfoCard.propTypes = {
   mediaSrc: PropTypes.any,
   title: PropTypes.any,
   description: PropTypes.any,
+  liked: PropTypes.any.isRequired,
+  bookmarked: PropTypes.any.isRequired,
+  toggleLike: PropTypes.any.isRequired,
+  toggleBookmark: PropTypes.any.isRequired,
+  share: PropTypes.any.isRequired,
 };
 
 export default MediaInfoCard;
