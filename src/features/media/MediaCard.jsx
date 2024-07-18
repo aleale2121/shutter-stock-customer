@@ -1,10 +1,17 @@
 import PropTypes from "prop-types";
 import { FaBookmark, FaHeart, FaShare } from "react-icons/fa";
 import MediaInfoCard from "./MediaInfoCard";
-import Modal from "./Modal";
-import useMediaActions from "../hooks/useMediaActions";
+import Modal from "../../components/Modal";
+import useMediaActions from "../../hooks/useMediaActions";
 
-export default function MediaCard({ mediaSrc, name, description, type }) {
+export default function MediaCard({
+  mediaSrc,
+  name,
+  description,
+  type,
+  likes,
+  shares,
+}) {
   const { liked, bookmarked, toggleLike, toggleBookmark, share } =
     useMediaActions();
   return (
@@ -41,6 +48,8 @@ export default function MediaCard({ mediaSrc, name, description, type }) {
             toggleLike={toggleLike}
             toggleBookmark={toggleBookmark}
             share={share}
+            likes={likes}
+            shares={shares}
           />
         </Modal.Window>
       </Modal>
@@ -55,14 +64,14 @@ export default function MediaCard({ mediaSrc, name, description, type }) {
             <FaBookmark
               size={20}
               onClick={toggleBookmark}
-              className={`${bookmarked ? "text-yellow-300" : "text-gray-100"}`}
+              className={`${bookmarked ? "text-yellow-300" : "text-gray-300"}`}
             />
             <FaHeart
               size={20}
               onClick={toggleLike}
-              className={`${liked ? "text-red-500" : "text-gray-100"}`}
+              className={`${liked ? "text-red-500" : "text-gray-300"}`}
             />
-            <FaShare size={20} onClick={share} className="text-gray-100" />
+            <FaShare size={20} onClick={share} className="text-gray-300" />
           </div>
         </div>
       </div>
@@ -75,4 +84,6 @@ MediaCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  likes: PropTypes.any.isRequired,
+  shares: PropTypes.any.isRequired,
 };
