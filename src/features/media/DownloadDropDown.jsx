@@ -1,15 +1,25 @@
 import { useState } from "react";
 import { FaDownload } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-const DownloadDropdown = () => {
+const DownloadDropdown = ({ type }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
-  const options = [
+  let options = [
     { label: "1080p (HD) - 1.5GB", value: "1080p" },
     { label: "720p (HD) - 800MB", value: "720p" },
     { label: "480p (SD) - 500MB", value: "480p" },
     { label: "360p - 300MB", value: "360p" },
   ];
+
+  if (type === "image") {
+    options = [
+      { label: "High Quality - 10MB", value: "high" },
+      { label: "Medium Quality - 5MB", value: "medium" },
+      { label: "Low Quality - 2MB", value: "low" },
+      { label: "Thumbnail - 500KB", value: "thumbnail" },
+    ];
+  }
 
   const handleDownload = () => {
     if (selectedOption) {
@@ -30,13 +40,13 @@ const DownloadDropdown = () => {
           )
         }
         value="a"
-        className="w-[10rem] appearance-none opacity-80 font-extrabold text-white text-opacity-90 bg-indigo-900 py-4 px-2 rounded-sm focus:outline-none"
+        className="w-[11rem] appearance-none opacity-80 font-extrabold text-white text-opacity-90 bg-indigo-900 py-4 px-2 rounded-sm focus:outline-none"
       >
         <option value="a" className="hidden font-extrabold text-xl" disabled>
           Download
         </option>
         {options.map((option) => (
-          <option 
+          <option
             key={option.value}
             value={option.value}
             className="bg-transparent font-normal opacity-70"
@@ -50,4 +60,7 @@ const DownloadDropdown = () => {
   );
 };
 
+DownloadDropdown.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 export default DownloadDropdown;

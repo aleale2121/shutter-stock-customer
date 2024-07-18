@@ -58,7 +58,7 @@ const MediaInfoCard = ({
             ></video>
           )}
           <div className="absolute bottom-16 text-white right-4 flex flex-row space-x-2">
-            <DownloadDropdown />
+            <DownloadDropdown type={mediaType} />
           </div>
           <div className="absolute top-2 right-2 flex flex-row space-x-2">
             <div
