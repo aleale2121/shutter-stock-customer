@@ -275,6 +275,7 @@ export default function MediaList() {
           type={item.type}
           likes={item.likes}
           shares={item.shares}
+          meta={item.meta}
         />
       ))}
     </div>

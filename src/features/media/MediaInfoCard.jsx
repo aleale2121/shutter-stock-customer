@@ -15,6 +15,7 @@ const MediaInfoCard = ({
   share,
   likes,
   shares,
+  meta,
 }) => {
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -57,7 +58,7 @@ const MediaInfoCard = ({
             ></video>
           )}
           <div className="absolute bottom-16 text-white right-4 flex flex-row space-x-2">
-             <DownloadDropdown />
+            <DownloadDropdown />
           </div>
           <div className="absolute top-2 right-2 flex flex-row space-x-2">
             <div
@@ -87,6 +88,22 @@ const MediaInfoCard = ({
           </div>
         </div>
         <div className="w-1/3 hidden md:block">
+          <div className="pl-4 pt-4">
+            {mediaType === "image" ? (
+              <>
+                <div>Dimensions: {meta.dimensions}</div>
+                <div>Format: {meta.format}</div>
+                <div>Size: {meta.size}</div>
+              </>
+            ) : (
+              <>
+                <div>Resolution: {meta.resolution}</div>
+                <div>Duration: {meta.duration}</div>
+                <div>Format: {meta.format}</div>
+                <div>Size: {meta.size}</div>
+              </>
+            )}
+          </div>
           <div className="flex flex-col mt-4 px-4 ">
             <div className="w-full flex flex-row items-center">
               <input
@@ -118,7 +135,9 @@ const MediaInfoCard = ({
         {/* Title Likes */}
         <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between w-full">
           <div className="text-left">
-            <h2 className="text-xl font-semibold text-gray-800  mt-4 md:mt-0">{title}</h2>
+            <h2 className="text-xl font-semibold text-gray-800  mt-4 md:mt-0">
+              {title}
+            </h2>
           </div>
           {/* Likes */}
           <div className="flex flex-row  items-center justify-between space-x-2">
@@ -238,6 +257,7 @@ MediaInfoCard.propTypes = {
   share: PropTypes.func.isRequired,
   likes: PropTypes.number.isRequired,
   shares: PropTypes.number.isRequired,
+  meta: PropTypes.object.isRequired,
 };
 
 export default MediaInfoCard;

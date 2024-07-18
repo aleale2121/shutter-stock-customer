@@ -11,6 +11,7 @@ export default function MediaCard({
   type,
   likes,
   shares,
+  meta,
 }) {
   const { liked, bookmarked, toggleLike, toggleBookmark, share } =
     useMediaActions();
@@ -50,6 +51,7 @@ export default function MediaCard({
             share={share}
             likes={likes}
             shares={shares}
+            meta={meta}
           />
         </Modal.Window>
       </Modal>
@@ -86,4 +88,5 @@ MediaCard.propTypes = {
   type: PropTypes.string.isRequired,
   likes: PropTypes.any.isRequired,
   shares: PropTypes.any.isRequired,
+  meta: PropTypes.object.isRequired,
 };
