@@ -90,18 +90,36 @@ const MediaInfoCard = ({
         <div className="w-1/3 hidden md:block">
           <div className="pl-4 pt-4">
             {mediaType === "image" ? (
-              <>
-                <div>Dimensions: {meta.dimensions}</div>
-                <div>Format: {meta.format}</div>
-                <div>Size: {meta.size}</div>
-              </>
+              <div className="flex flex-col items-start">
+                <div className="flex flex-row space-x-2">
+                  <p>Dimensions:</p>
+                  <p className="text-gray-400">{meta.dimensions}</p>
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <p>Format: </p>
+                  <p className="text-gray-400">{meta.format}</p>
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <p>Size:</p> <p className="text-gray-400">{meta.size}</p>
+                </div>
+              </div>
             ) : (
-              <>
-                <div>Resolution: {meta.resolution}</div>
-                <div>Duration: {meta.duration}</div>
-                <div>Format: {meta.format}</div>
-                <div>Size: {meta.size}</div>
-              </>
+              <div className="flex flex-col items-start">
+                <div className="flex flex-row space-x-2">
+                  <p>Resolution:</p>
+                  <p className="text-gray-400">{meta.resolution}</p>
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <p>Duration: </p>
+                  <p className="text-gray-400">{meta.duration}</p>
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <p>Size:</p> <p className="text-gray-400">{meta.size}</p>
+                </div>
+                <div className="flex flex-row space-x-2">
+                  <p>Format:</p> <p className="text-gray-400">{meta.format}</p>
+                </div>
+              </div>
             )}
           </div>
           <div className="flex flex-col mt-4 px-4 ">
