@@ -1,9 +1,9 @@
 import Login from "../features/auth/Login";
 
-export default function LoginPage() {
+export default function LoginEmailPage() {
   return (
     <section id="login-section" className="mt-16">
-      <Login />
+      <Login current="email" />
     </section>
   );
 }
