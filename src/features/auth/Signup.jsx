@@ -23,9 +23,9 @@ export default function Signup() {
           />
 
           <input
-            type="email"
+            type="text"
             className="w-full px-3 mt-4 py-2 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light"
-            placeholder="Enter your email address"
+            placeholder="Enter your email or phone"
           />
 
           <input

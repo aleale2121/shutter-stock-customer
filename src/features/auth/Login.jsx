@@ -1,5 +1,11 @@
 import { NavLink } from "react-router-dom";
-export default function Login() {
+import LoginOptions from "./LoginOptions";
+import PropTypes from "prop-types";
+import PhoneInput from "./PhoneInput";
+import EmailInput from "./EmailInput";
+import PasswordInput from "./PasswordInput";
+
+export default function Login({ current }) {
   return (
     // <!-- Global Container -->
     <div className="flex items-center justify-center">
@@ -8,29 +14,23 @@ export default function Login() {
         {/* <!-- Left Side --> */}
         <div className="p-6 md:pl-16 md:pt-12">
           {/* <!-- Top Content --> */}
-          <h2 className="font-mono mb-4 text-3xl font-bold">Log In</h2>
+          <h2 className="font-mono mb-4 text-3xl font-bold">Verify Phone</h2>
           <p className="max-w-sm mb-6 font-sans font-light text-gray-600">
-            Log in to your account to download pictures & videos
+            Verify your phone number to download pictures & videos
           </p>
-          <input
-            type="text"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light"
-            placeholder="Enter your email address"
-          />
 
-          <input
-            type="password"
-            className="w-full px-3 py-2 mt-6 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light"
-            placeholder="Enter your password"
-          />
-
+          {current === "email" ? <EmailInput /> : <PhoneInput />}
+          {current === "email" ? <PasswordInput /> : <></>}
           {/* <!-- Middle Content --> */}
           <div className="flex flex-col items-center justify-between mt-4 space-y-6 md:flex-row md:space-y-0">
             <NavLink to="#" className="font-thin text-cyan-700">
               Forgot password
             </NavLink>
 
-            <NavLink to="/home" className="w-full md:w-auto py-2 px-10 space-x-4 font-sans font-bold text-white rounded-md shadow-lg  bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 hover:shadow-lg border transition hover:-translate-y-0.5 duration-150">
+            <NavLink
+              to={current === "phone" ? "/verify/phone" : "/home"}
+              className="w-full md:w-auto py-2 px-10 space-x-4 font-sans font-bold text-white rounded-md shadow-lg  bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 hover:shadow-lg border transition hover:-translate-y-0.5 duration-150"
+            >
               <span>Login</span>
             </NavLink>
           </div>
@@ -44,21 +44,9 @@ export default function Login() {
           </p>
 
           {/* <!-- Bottom Buttons Container --> */}
-          <div className="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
-            <NavLink  to="/home" className="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
-              <img src="/assets/images/facebook.png" alt="" className="w-6" />
-              <span className="font-thin">Facebook</span>
-            </NavLink>
-            <NavLink to="/home" className="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
-              <img src="/assets/images/google.png" alt="" className="w-6" />
-              <span className="font-thin">Google</span>
-            </NavLink>
-          </div>
+          <LoginOptions current={current} />
           <div className="mt-4 text-right">
-            <NavLink
-              to="/signup"
-              className="text-sm font-thin text-cyan-700"
-            >
+            <NavLink to="/signup" className="text-sm font-thin text-cyan-700">
               Signup if you dont have an account
             </NavLink>
           </div>
@@ -73,3 +61,7 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  current: PropTypes.string.isRequired,
+};

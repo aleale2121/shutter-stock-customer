@@ -9,8 +9,10 @@ import "flowbite/dist/flowbite.min.js";
 import Subscription from "./pages/Subscription";
 import Members from "./pages/Members";
 import Notification from "./pages/Notification";
-import LoginPage from "./pages/LoginPage";
+import LoginEmailPage from "./pages/LoginEmailPage";
+import LoginPhonePage from "./pages/LoginPhonePage";
 import SignupPage from "./pages/SignupPage";
+import PhoneVerificationPage from "./pages/PhoneVerificationPage";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route>
             <Route index element={<Navigate replace to="/home" />} />
             <Route path="/home" element={<Guests />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/login/email" element={<LoginEmailPage />} />
+            <Route path="/login/phone" element={<LoginPhonePage />} />
+            <Route path="/verify/phone" element={<PhoneVerificationPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/contact" element={<Contacts />} />
             <Route path="/members" element={<Members />} />

@@ -4,7 +4,7 @@ export default function PhoneInput() {
   return (
     <div className="relative">
       <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-        <FaPhoneAlt />
+        <FaPhoneAlt className="text-gray-400" />
       </div>
       <input
         type="text"
